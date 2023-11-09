@@ -1,5 +1,5 @@
-Öğrenci Numarası:1030510203
+Öğrenci Numarası: 1030510203
 
-Öğrenci Adı:Batuhan Kaya
+Öğrenci Adı: Batuhan Kaya
 
-Ders Kodu:BS435 Web Programlama
+Ders Kodu: BS435 Web Programlama
