@@ -1,0 +1,212 @@
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.button{
+  width: 150px;
+  height: 70px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1px;
+  background-color: darksalmon;
+}
+.button_r{
+  width: 170px;
+  height: 70px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1px;
+  background-color:firebrick;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.navbarFirst{
+  height: 100px;
+  font-family: Arial;
+  background-color: #8faef8;
+  /* text-align: center;
+   justify-content: flex-start;*/
+  display: flex;
+  align-items: baseline;
+  font-weight: bold;
+
+}
+.container{
+  align-items: baseline;
+  text-align: -webkit-left;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.GameModeBut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+.button1{
+  height: 500px;
+  width: 1000px;
+
+
+
+}
+
+.navbarhome{
+  width: 40px;
+  height: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+.buttongrup{
+  display: flex;
+
+
+}
+.user-hand{
+  width: 15%;
+}
+.computer-hand{
+  width: 15%;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*  REAPONSİVE  */
+
+@media screen and (max-width:1700px){
+  .button1{
+    flex-direction:column !important;
+
+  }}
+
+@media screen and (max-width:1500px){
+
+  .button1{
+    width: 600px !important;
+    height: 800px !important;
+
+  }
+
+}
+@media screen and (max-width:1200px){
+  .buttongrup {
+    margin-left: -5rem;
+    align-items: center !important;
+  }
+  .button1{
+    width: 450px !important;
+    height: 800px !important;
+
+  }
+
+  .button{
+    width: 130px !important;
+    height: 55px !important;
+    font-size: 18px !important;
+
+  }
+  .button_r{
+    width: 130px !important;
+    height: 60px !important;
+    font-size: 18px !important;
+  }}
+
+
+
+
+@media screen and (max-width:768px){
+
+  .buttongrup {
+    margin-left: -2rem;
+    align-items: center;
+
+  }
+  .button1{
+
+    width: 325px !important;
+
+  }
+  .user-hand{
+    width: 14%;
+  }
+  .computer-hand{
+    width: 14%;
+  }
+  .button{
+    width: 120px !important;
+    height: 45px !important;
+    font-size: 16px !important;
+
+  }
+  .button_r{
+    width: 120px !important;
+    height: 50px !important;
+    font-size: 18px !important;
+  }
+}
+
+
+@media screen and (max-width:600px){
+
+  .buttongrup {
+    flex-direction: column;
+
+  }
+
+  .button1 {
+    margin-left: -4rem !important;
+    min-width: 600px!important;
+    height: 300px !important;
+  }
+  .user-hand{
+    width: 14%;
+  }
+  .computer-hand{
+    width: 14%;
+  }
+  .button{
+    width: 100px;
+    height: 25px;
+    font-size: 16px;
+
+  }
+  .button_r{
+    width: 100px;
+    height: 20px;
+    font-size: 16px;
+  }
+}
+
