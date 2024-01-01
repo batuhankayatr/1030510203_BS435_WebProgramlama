@@ -1,0 +1,26 @@
+.GameModeBut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../public/image/taskagt.png");
+}
+.card{
+
+    margin-left: 5rem;
+    padding-top: -10rem;
+    width: 1000px;
+    height: 1000px;
+    justify-content: center;
+
+
+}
+.buttongrup{
+    display: flex;
+    justify-content: center;
+    padding-top: 250px;
+    padding-bottom:500px;
+}
+.button1{
+    height: 300px;
+    width: 400px;
+}

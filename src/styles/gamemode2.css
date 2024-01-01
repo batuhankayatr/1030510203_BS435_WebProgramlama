@@ -1,0 +1,17 @@
+.GameMode2{
+    text-align: center;
+    background-color: antiquewhite;
+    padding-bottom:5000px;
+}
+.choices{
+    display:flex;
+    justify-content: center;
+    margin: 40px;
+
+
+}
+.choice_1{
+    color:red;
+    font-weight: bold;
+    font-size: 20px;
+}
