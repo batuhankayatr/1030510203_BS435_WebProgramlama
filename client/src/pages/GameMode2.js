@@ -2,20 +2,20 @@
 import React, {useEffect, useState} from "react";
 import NavbarComponent from "../components/NavbarComponent";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 function GameMode2() {
     const [userChoice,setUserChoice]= useState('rock')
     const [computerChoice, setComputerChoice]= useState('rock')
     const [userPoint, setUserPoint]= useState(-2)
     const [computerPoint, setComputerPoint]= useState(0)
-    const [turnResult, setTurnResult]= useState(null)
-    const [result,setResult]= useState('Let\'s see who wins')
+    const [result,setResult]= useState('Seçim Yapınız !')
     const [gameOver, setGameOver]= useState(false)
     const gameMode = "gamemode2";
     const choices = ['rock','paper','scissors']
     const apiUrl = "http://localhost:3000/scores";
-
-    const handleLogin = async () => {
+    const navigate = useNavigate();
+    const handleScore = async () => {
         try {
             const userId = localStorage.getItem("user");
             await axios.post(`${apiUrl}`, { userId, userPoint, computerPoint, gameMode });
@@ -43,26 +43,30 @@ function GameMode2() {
             if (comboMoves === 'rockrock' || comboMoves === 'paperpaper' || comboMoves === 'scissorsscissors'){
                 const updateUserPoints = userPoint + 2
                 setUserPoint(updateUserPoints)
-                setTurnResult('User Got The Point')
                 if (updateUserPoints === 10){
                     setGameOver(true)
-                    setResult('user wins')
-                    handleLogin()
+                    setResult('KAZANDIN !')
+                    handleScore()
                 }
             }
         }   if (comboMoves === 'rockscissors' || comboMoves ==='rockpaper' || comboMoves === 'paperrock' || comboMoves ==='paperscissors'|| comboMoves === 'scissorsrock' || comboMoves === 'scissorspaper' ){
             const updateComputerPoints = computerPoint + 1
             setComputerPoint(updateComputerPoints)
-            setTurnResult('Computer Got The Point')
             if (updateComputerPoints === 10){
                 setGameOver(true)
-                setResult('Computer wins')
-                handleLogin()
+                setResult('BİLGİSAYAR KAZANDI !')
+                handleScore()
             }
 
         }
 
     },[userChoice,computerChoice])
+    useEffect(() => {
+        const userId = localStorage.getItem("user");
+        if (!userId) {
+            navigate('/Login');
+        }
+    }, [navigate]);
 
     return (
         <div className="GameMode2">
@@ -89,7 +93,6 @@ function GameMode2() {
                     </button>)}
             </div>
             <div className='result'>
-                <h1>Turn Result: {turnResult}</h1>
                 <h1>Final Result: {result}</h1>
             </div>
             <div className='button-div'>
