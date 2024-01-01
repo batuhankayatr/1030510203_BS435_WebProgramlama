@@ -64,9 +64,9 @@ function GameMode2() {
 
                     <Navbar.Brand >ROCK PAPER SCISSORS</Navbar.Brand>
                     <Navbar.Toggle />
-                    {/*<Navbar.Collapse className="justify-content-end">
+                    {/*<NavbarComponent.Collapse className="justify-content-end">
 
-                    </Navbar.Collapse>*/}
+                    </NavbarComponent.Collapse>*/}
                 </Container>
             </Navbar>
             <div className='score'>
